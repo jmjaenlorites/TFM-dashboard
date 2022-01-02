@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+
+  dash:
+    build: ./
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 8050:8050
+
+
+
