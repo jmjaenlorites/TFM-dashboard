@@ -3,9 +3,9 @@ version: '3.8'
 services:
 
   dash:
-    build: ./
+    build: ./project
     volumes:
-      - ./:/usr/src/app
+      - ./project:/usr/src/app
     ports:
       - 8050:8050
 

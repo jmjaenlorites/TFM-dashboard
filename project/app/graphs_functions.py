@@ -3,7 +3,7 @@
 # from dash import html
 # from dash.dependencies import Input, Output
 # from dash_html_components import Label
-import plotly.graph_objs as go
+# import plotly.graph_objs as go
 import plotly.express as px
 import logging
 import numpy as np
@@ -41,7 +41,8 @@ def load_image(lr=7, style_weight=-1, content_weight=-10, model='0'):
     logging.warning(f"_{get_lr(lr)}_{get_w(style_weight)}_{get_w(content_weight)}")
     try:
         fig = load_image_given_path(
-            path=f"./transfer_style_images{get_model(model)}/im_13_{get_lr(lr)}_{get_w(style_weight)}_{get_w(content_weight)}.npy",
+            path=f"./transfer_style_images{get_model(model)}/"
+                 f"im_13_{get_lr(lr)}_{get_w(style_weight)}_{get_w(content_weight)}.npy",
             title=f"LR: {get_lr(lr)} | SW: {get_w(style_weight)} | CW: {get_w(content_weight)}")
         return fig
     except FileNotFoundError:

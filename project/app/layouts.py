@@ -1,10 +1,10 @@
 # from os import listdir
-from sys import path
+# from sys import path
 from dash import dcc
 from dash import html
-from dash.dependencies import Input, Output
-from dash import dash_table
-import plotly.express as px
+# from dash.dependencies import Input, Output
+# from dash import dash_table
+# import plotly.express as px
 
 from graphs_functions import im_original, im_generated, load_image
 
@@ -54,7 +54,7 @@ def layout():
 
         html.Div([
             html.P("Learning rate"),
-            dcc.Slider(id="learning_rate", min=0, max=7, value=7,
+            dcc.Slider(id="learning_rate", min=0, max=7, value=7, step=1,
                        marks={x: f"{y:.0e}"
                               for x, y in enumerate([0.00001, 0.00005, 0.0001, 0.0005, 0.001, 0.005, 0.01, 0.05])})
         ], style={'display': 'inline-block', 'width': '100%', }),
